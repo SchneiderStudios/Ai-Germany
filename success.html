@@ -17,6 +17,7 @@
       justify-content:center;
       min-height:100vh;
     }
+
     .card{
       background:#fff;
       padding:50px 40px;
@@ -26,17 +27,20 @@
       width:100%;
       box-shadow:0 10px 40px rgba(0,0,0,.1);
     }
+
     h1{
       font-family:'DM Serif Display',serif;
       font-weight:400;
       font-size:28px;
       margin-bottom:10px;
     }
+
     p{
       color:#6e6e73;
       margin-bottom:30px;
       line-height:1.6;
     }
+
     .btn{
       display:inline-block;
       padding:14px 26px;
@@ -46,25 +50,26 @@
       text-decoration:none;
       font-weight:600;
     }
-    .btn:hover{background:#0077ed;}
+
     .note{
       margin-top:20px;
       font-size:12px;
       color:#999;
     }
   </style>
+
+  <!-- 🔒 ВАЖНО: проверка ДО загрузки страницы -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("paid") !== "true") {
+      document.write("<h2 style='font-family:sans-serif;text-align:center;margin-top:50px;'>Access denied</h2>");
+      throw new Error("No access");
+    }
+  </script>
+
 </head>
 
 <body>
-
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const paid = params.get("paid");
-
-  if (paid !== "true") {
-    document.body.innerHTML = "<h2 style='font-family:sans-serif;text-align:center;margin-top:50px;'>Access denied</h2>";
-  }
-</script>
 
 <div class="card">
   <h1>✅ Zahlung erfolgreich</h1>
