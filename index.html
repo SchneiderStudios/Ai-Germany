@@ -224,27 +224,35 @@ footer{background:var(--snow);border-top:1px solid var(--edge);padding:40px 28px
 
 <section class="hero">
   <div class="hero-bg"></div>
+
+  <!-- BADGE / PILLS -->
   <div class="pill" id="hero-pill"></div>
+
+  <!-- TITLE -->
   <h1 id="hero-h1"></h1>
+
+  <!-- SUBTITLE -->
   <p class="hero-sub" id="hero-sub"></p>
- <!-- КНОПКИ -->
 
+  <!-- CTA BUTTONS -->
   <div class="hero-btns">
-
     <button class="btn-p" onclick="buyCourse()" id="hero-btn1"></button>
-
     <button class="btn-g" onclick="sc('#modules')" id="hero-btn2"></button>
-
   </div>
 
-  <!-- ПОЯСНЕНИЕ К КУРСУ -->
-
+  <!-- COURSE DESCRIPTION -->
   <div class="hero-note" id="hero-note"></div>
 
-  <!-- PDF (вторичный оффер) -->
+  <!-- PDF OFFER (SECONDARY CTA) -->
+  <div class="hero-pdf">
+    <a href="https://buy.stripe.com/test_8x214p2Eybhxf8ygARcAo02"
+       target="_blank"
+       class="pdf-btn">
+      📄 PDF Prompts – 9€
+    </a>
 
-  <div id="hero-pdf-line" class="hero-note"></div>
-
+    <div id="pdf-hero-text" class="hero-note-small"></div>
+  </div>
 </section>
 
   <div style="margin-top:18px;">
