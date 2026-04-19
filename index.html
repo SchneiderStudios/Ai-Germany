@@ -793,6 +793,30 @@ function render(){
     ? (lang==='de'?'→ Kurs öffnen':'→ Открыть курс')
     : p.btn;
   document.getElementById('p-fine').innerHTML=p.fine;
+    const pdfTitle = document.getElementById('pdf-title');
+  const pdfText = document.getElementById('pdf-text');
+  const pdfSub = document.getElementById('pdf-sub');
+
+  if(pdfTitle){
+    pdfTitle.textContent =
+      lang === 'de'
+        ? 'Oder nur das PDF kaufen'
+        : 'Или купить только PDF';
+  }
+
+  if(pdfText){
+    pdfText.innerHTML =
+      lang === 'de'
+        ? 'Dieses PDF enthält fertige <strong>KI-Prompts</strong> für ChatGPT & andere KI-Tools.<br>Ideal für Behördenbriefe, Bewerbungen und Alltag in Deutschland.<br><strong>Kein Kurs – sofort einsatzbereit.</strong>'
+        : 'Этот PDF содержит готовые <strong>AI-промпты</strong> для ChatGPT и других ИИ-инструментов.<br>Подходит для писем в ведомства, резюме и повседневных задач в Германии.<br><strong>Это не курс — сразу готово к использованию.</strong>';
+  }
+
+  if(pdfSub){
+    pdfSub.textContent =
+      lang === 'de'
+        ? 'Sofortiger Download nach Zahlung'
+        : 'Мгновенная загрузка после оплаты';
+  }
   const ln=document.getElementById('p-legal');
   if(ln) ln.textContent=d.legal;
 
