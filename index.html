@@ -773,7 +773,14 @@ function render(){
   document.getElementById('hero-btn1').textContent=d.hero.btn1;
   document.getElementById('hero-btn2').textContent=d.hero.btn2;
   document.getElementById('hero-note').innerHTML=d.hero.note;
+  const heroPdf = document.getElementById('hero-pdf-line');
 
+if(heroPdf){
+  heroPdf.textContent =
+    lang === 'de'
+      ? 'Auch verfügbar: PDF mit fertigen KI-Prompts (kein Kurs)'
+      : 'Также доступно: PDF с готовыми AI-промптами (не курс)';
+}
   // trust
   d.trust.forEach((t,i)=>{document.getElementById('tr'+(i+1)).textContent=t;});
 
