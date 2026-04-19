@@ -858,6 +858,14 @@ function render(){
   }
   const ln=document.getElementById('p-legal');
   if(ln) ln.textContent=d.legal;
+    const pdfHeroText = document.getElementById('pdf-hero-text');
+
+  if(pdfHeroText){
+    pdfHeroText.innerHTML =
+      lang === 'de'
+        ? 'Sofort einsatzbereite <strong>KI-Prompts</strong> für ChatGPT.<br>Ideal für Behördenbriefe, Bewerbungen und Alltag in Deutschland.'
+        : 'Готовые <strong>AI-промпты</strong> для ChatGPT.<br>Подходят для писем в ведомства, резюме и повседневных задач в Германии.';
+  }
 
   // faq
   document.getElementById('faq-h').innerHTML=d.faq.h;
